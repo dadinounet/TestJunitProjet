@@ -20,7 +20,7 @@ public class Livre {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-				
+		/*		
 		Livre livre1 = new Livre("Maxime Chatam","Leviatemps");
 		Livre livre2 = new Livre("Maxime","Liberté");
 		
@@ -34,7 +34,7 @@ public class Livre {
 		livre2.setNbPages(Console.readInt("Entrez le nombre de pages du livre : \n"));
 		
 		System.out.println("Voici le nombre de pages de vos deux livres : " + livre1.getNB_pages() + " et " + livre2.getNB_pages() + " ce qui fait un total de " + CalculNbPages(livre1.getNB_pages(),livre2.getNB_pages()) + "\n");
-		
+		*/
 		
 	}
 	
@@ -75,7 +75,6 @@ public class Livre {
 		if (nombres_pages <=0)
 		{
 			System.out.println("Erreur : nombres de pages insuffisant ou négatif");	
-			nombres_pages = Console.readInt("Entrez le nombres de pages : \n");
 			this.NbPages = nombres_pages;
 		}
 		else
