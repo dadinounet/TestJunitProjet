@@ -6,6 +6,7 @@
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="10102015_TP04">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../Desktop/eclipse/eclipse431"/>
+    <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
@@ -57,5 +58,21 @@
         <java classname="EPSI.Livre" failonerror="true" fork="yes">
             <classpath refid="10102015_TP04.classpath"/>
         </java>
+    </target>
+    <target name="tester">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Test.tester" todir="${junit.output.dir}"/>
+            <classpath refid="10102015_TP04.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
     </target>
 </project>
