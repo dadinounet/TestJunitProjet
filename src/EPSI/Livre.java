@@ -50,7 +50,7 @@ public class Livre {
 		
 		NbPagesTotal = Nb_Pages_L1 + Nb_Pages_L2;
 		
-		return NbPagesTotal;
+		return 0;
 	}
 	
 	
